@@ -14,8 +14,8 @@ RUN export DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 \
     python-reportlab python-simplejson python-yaml wget wkhtmltopdf \
  && adduser --system --group --home /var/lib/odoo --shell /bin/bash odoo \
  && pg_ctlcluster 9.4 main start && su - postgres -c "createuser -d odoo" \
- && wget -nv -O- https://github.com/odoo/odoo/archive/8.0.tar.gz \
-  | tar xz --xform s,^odoo-8.0,odoo, -C /opt && cd /opt/odoo \
+ && wget -nv -O- https://github.com/odoo/odoo/archive/10.0.tar.gz \
+  | tar xz --xform s,^odoo-10.0,odoo, -C /opt && cd /opt/odoo \
  && pip install -e . \
  && echo H4sIAAM2oFMCA+3VzWrCQBQFYNd5ijyAmj/tQnDhwlqhVbCULopImlw1aDLhzkShT9+b \
  0aKVQjfSIpxvkcmcmQkJyZ2oVClPyaGliXfE7UQVy8Z1+eKu07GtuGz9MPAbQRh1fT8K7bwg9CVy \
